@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;   
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.enter {
+    text-align: center;
+    cursor: pointer;
+}
+
+#add {
+    cursor: pointer;
+}
+
+.background {
+    background-color: rgb(114, 164, 255);
+    min-height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+#add {
+    background-color: rgb(41, 92, 245);
+    margin: 30px, 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.list {
+    font-size: 20px;
+}
+
+#task {
+    background-color: rgb(225, 225, 225);
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+    border: black 1px solid;
+    color: black;
+}
+
+.sr-only {
+    font-size: 20px;
+}
+
+#taskList li {
+    list-style: none;
+    margin: 8px 20px;
+    padding: 10px;
+    background: rgb(182, 204, 244);
+
+    display: flex;
+    justify-content: space-between; /* pushes text left, button right */
+    align-items: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+#taskList li.dragging {
+    opacity: 0.6;
+    transform: scale(1.02);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#taskList li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.3);
+}
+
+.drag-handle {
+    cursor: grab;
+    margin-right: 10px;
+    font-size: 28px;
+    user-select: none;
+    font-weight: bold;
+}
+
+#task::placeholder {
+    color: rgb(79, 79, 79);
+}
+
+#taskList li .delete {
+    background: rgb(0, 0, 0);
+    margin: 2px 10px;
+    padding: 5px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    align-content: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.task-text {
+    cursor: pointer;              /* show pointer on hover */
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: grey;
+}
